@@ -5,10 +5,15 @@
   margin-bottom: 16px;
 }
 
+.userItem:last-child {
+  margin-bottom: 0;
+}
+
 .userInfo {
   display: flex;
   align-items: center;
   gap: 12px;
+  cursor: pointer;
 }
 
 .profileImage {
@@ -16,11 +21,13 @@
   height: 50px;
   border-radius: 50%;
   object-fit: cover;
+  border: 1px solid #dbdbdb;
 }
 
 .textInfo {
   display: flex;
   flex-direction: column;
+  gap: 12px;
 }
 
 .userName {
