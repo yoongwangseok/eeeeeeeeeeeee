@@ -28,13 +28,10 @@ const mockFollowerData = [
   },
 ];
 
-// "followers" 또는 "followings" 같은 type을 props로 받기
 function FollowListPage() {
   return (
     <div className={styles.pageContainer}>
-      <div className={styles.headerWrapper}>
-        <Header title="Followers" /> {/*지금은 follower로 고정*/}
-      </div>
+      <Header type="title-with-back" title="Followers" />
 
       <main className={styles.mainContent}>
         <ul className={styles.userList}>
@@ -50,9 +47,7 @@ function FollowListPage() {
         </ul>
       </main>
 
-      <div className={styles.footerWrapper}>
-        <Footer />
-      </div>
+      <Footer />
     </div>
   );
 }

@@ -8,6 +8,7 @@ function UserListItem({ image, name, accountname, initialIsFollowed = false }) {
 
   const handleFollowToggle = () => {
     setIsFollowed((prev) => !prev);
+    // API 호출 로직
   };
 
   const handleImageError = (e) => {
@@ -15,12 +16,12 @@ function UserListItem({ image, name, accountname, initialIsFollowed = false }) {
   };
 
   return (
-    <li className={styles.UserItem}>
+    <li className={styles.userItem}>
       <div className={styles.userInfo}>
         <img
           src={image}
           alt={`${name}의 프로필 이미지`}
-          className={styles.basicProfileImage}
+          className={styles.profileImage}
           onError={handleImageError}
         />
         <div className={styles.textInfo}>
@@ -31,7 +32,7 @@ function UserListItem({ image, name, accountname, initialIsFollowed = false }) {
       <button
         type="button"
         className={`${styles.followButton} ${
-          isFollowed ? styles.isFollowed : ''
+          isFollowed ? styles.followed : ''
         }`}
         onClick={handleFollowToggle}
       >
